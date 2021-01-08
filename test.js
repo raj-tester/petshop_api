@@ -117,10 +117,8 @@ it("Verify the 'POST' response payload's createdAt property has current date val
         var day  = (dateObj.getDate()).toString();
         day = day < 9 ? '0'+ day : day;
         var currDate = year + "-" + month + "-" +day;
-        console.log("DATE "+currDate);
         var dateString =JSON.stringify(res.body.createdAt);
         var createdDate = dateString.substring(1,11);
-        console.log("ATDATE "+createdDate);
         expect(createdDate).equal(currDate);
         if(err){
             done(err);

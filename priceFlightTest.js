@@ -12,6 +12,5 @@ fixture `Getting Started`
         console.log(getWindowLocation)
 
        // await setCookie();
-       await t
-        .wait(`10000`)
+      
     });

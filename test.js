@@ -1,12 +1,14 @@
 var chai = require("chai");
 var chaihttp = require("chai-http");
 var expect = require("chai").expect;
+const asserttype = require('chai-asserttype');
 var dataSchema  = require('./jsonSchema.js');
 var postData  = require('./apiPostData.js');
 
 chai.use(chaihttp);
 chai.use(require('chai-json-schema'));
 
+chai.use(asserttype);
 var baseURL  = "https://reqres.in";
 
 
@@ -76,6 +78,7 @@ it("verify the 'POST' response status code for '/api/users' route ", function(do
         expect(res.body).to.have.property('name');
         expect(res.body).to.have.property('job');
         expect(res.body).to.have.property('id');
+        expect(res.body.id).to.be.number();
         expect(res.body).to.have.property('createdAt');
         if(err){
             done(err);

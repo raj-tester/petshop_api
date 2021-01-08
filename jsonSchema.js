@@ -1,4 +1,4 @@
-//we can use this as a data repository to store different data schema getting used in our system
+//we will use this as a data repository to store different data schema getting used in our system
 
 
 exports.jsonSchemaCreateUser = {

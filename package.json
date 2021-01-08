@@ -1,0 +1,21 @@
+{
+  "name": "test-folder",
+  "version": "1.0.0",
+  "description": "Testing",
+  "main": "test.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "raj",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "chai-json-schema": "^1.5.1",
+    "request": "^2.88.2",
+    "should": "^13.2.3"
+  },
+  "dependencies": {
+    "mocha": "^8.2.1"
+  }
+}

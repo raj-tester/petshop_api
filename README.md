@@ -32,7 +32,39 @@ Test Scenarios coverage:
 
 Run command:
 
-Go to the folder folder Leanspace->api_test which has test.js file and in the CMD or terminal run : npm test command.
+Go to the folder folder Leanspace->api_test which has test.js file and in the CMD or terminal run : npm test
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+
+UI Test 
+
+Project Description:
+
+Node.js Framework used are:TestCafe
+
+Instruction:
+install testcafe globally using: npm install -g testcafe 
+
+File Structure:
+
+I have followed Page Object Model and have tried to maintain the hierarchy displayed at amazon.in 
+
+Page folder: This folder will contains all the {page}.js file which would have all the elements present on that page.
+
+Test Data Folder: This folder will have js files containing the test data which would like to pass for our test scenarios. for example, I have added the user filter for shoes like the company, and size user wants to select and then these filters would be passed on to the Product filter js files.
+
+Product Filter: This folder will have js files which would get filter data from test Data and later it will apply filters so that it could be used directly into our test
+
+Util folder: This folder will have js files which would need to perform common actions on webpages.
+
+Test : This folder will have all test js files. 
+
+
+Run command:
+
+Go to the folder folder Leanspace->UI_test which has test.js file and in the CMD or terminal run: testcafe chrome test.js --skip-js-errors -q. 
+
+note: You can add any browser you have installed locally on your system for example for firefox : testcafe firefox test.js --skip-js-errors -q
 

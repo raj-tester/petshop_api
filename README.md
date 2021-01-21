@@ -6,9 +6,13 @@ Node.js Framework used are: Mocha, chai, chai-http, chai-json-schema
 
 Instruction:
 install mocha globally using: npm install -g mocha
+
 install chai under dev dependencices: npm install chai --save-dev
+
 install chai-http under dev dependencices: npm install chai-http --save-dev
+
 install chai-json-schema under dev dependencices: npm install chai-json-schema --save-dev
+
 install  chai-asserttype under dev dependencices: npm install chai-asserttype --save-dev
 
 

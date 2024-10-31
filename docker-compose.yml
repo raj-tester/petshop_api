@@ -1,0 +1,8 @@
+version: '3'
+services:
+    swaggerapi:
+        image: swaggerapi/swagger-ui:v5.17.14
+        container_name: myswagger
+        restart: always
+        ports:
+            - '8080:8080'

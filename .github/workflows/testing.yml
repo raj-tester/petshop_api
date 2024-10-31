@@ -1,0 +1,26 @@
+name: Automated API tests using Postman CLI
+
+on: push
+
+jobs:
+  automated-api-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install docker compose
+        run: |
+          sudo apt install docker-compose
+      - name: pull docker image
+        run: |
+          docker pull swaggerapi/swagger-ui:v5.17.14
+      - name: Run docker-compose
+        run: |
+          docker-compose up -d
+      - name: Install Postman CLI
+        run: |
+          curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
+      - name: Login to Postman CLI
+        run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
+      - name: Run API tests
+        run: |
+          postman collection run "${{ github.workspace }}/postman/collections/test_collection.json" --integration-id "170468-${{ github.run_id }}"

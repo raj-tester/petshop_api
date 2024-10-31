@@ -4,7 +4,7 @@
   "description": "Testing",
   "main": "test.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --reporter mochawesome"
   },
   "author": "raj",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "should": "^13.2.3"
   },
   "dependencies": {
-    "mocha": "^8.2.1"
+    "mocha": "^8.4.0",
+    "mochawesome": "^7.1.3"
   }
 }

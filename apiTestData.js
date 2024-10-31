@@ -23,7 +23,7 @@ exports.createPet = {
   exports.invalidinput = {
     "id": "abccc",
     "category": {
-      "id": "xxxxx",
+      "id": "xx",
       "name": 12233
     },
     "name": "big dog",

@@ -19,9 +19,9 @@ install  chai-asserttype under dev dependencices: npm install chai-asserttype --
 
 There are three 3 javascript files i have created:
 
-1. Test.js: this file has all the test cases for api_testing. To ease the maintainability we can sorted out test cases into different folder according to the http requests(GET, POST, DELETE, PUT) or according the system modules
+1. Test.js: this file has all the test cases for api_testing.
 
-2.apiData.js : this file will be used as a data repository to store different types of data as per our business requirements and all data call would be happening from this file to test.js
+2.apiData.js : this file will be used as a data repository to store different types of data as per our business requirements and all data call will be happening from this file to test.js
 
 3.jsonSchema.js: this file will be used as a data repository to store different data schema getting used in our system.
 

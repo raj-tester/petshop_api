@@ -2,7 +2,7 @@
 
 Project Description:
 
-Node.js Framework used are: Mocha, chai, chai-http, chai-json-schema
+Node.js Framework used are: Mocha, chai, chai-http, chai-json-schema, mochawesome-report-generator
 
 Instruction:
 
@@ -16,6 +16,8 @@ install chai-json-schema under dev dependencices: npm install chai-json-schema -
 
 install  chai-asserttype under dev dependencices: npm install chai-asserttype --save-dev
 
+install mochawesome reporting tool: npm i mochawesome-report-generator
+
 
 There are three 3 javascript files i have created:
 
@@ -25,18 +27,9 @@ There are three 3 javascript files i have created:
 
 3.jsonSchema.js: this file will be used as a data repository to store different data schema getting used in our system.
 
-Test Scenarios coverage:
-
-1. GET and POST response json schema validation
-2. User record update using id
-3. User record delete using id
-4. User seach using id
-5. Error valiadations
-6. Response payload for POST which includes expected properties/field
-7. Response payload for GET
-8.  Response payload for GET
-
 Run command:
 
-CMD or terminal run : npm test
+CMD or terminal run: npm test
+
+Test Report is generated in html forma. please check mochawesome-report-> mochawesome.html file for test report.
 

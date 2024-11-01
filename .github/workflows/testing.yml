@@ -16,11 +16,24 @@ jobs:
       - name: Run docker-compose
         run: |
           docker-compose up -d
-      - name: Install Postman CLI
+      - name: install npm
         run: |
-          curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
-      - name: Login to Postman CLI
-        run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
-      - name: Run API tests
+          npm install
+      - name: install mocha
         run: |
-          postman collection run "${{ github.workspace }}/postman/collections/test_collection.json" --integration-id "170468-${{ github.run_id }}"
+         npm i mocha
+      - name: install chai
+        run: |
+          npm i --save-dev chai
+      - name: install chai-http
+        run: |
+          npm i --save-dev chai-http
+      - name: install chai-json-schema
+        run: |
+          npm i --save-dev chai-json-schema
+      - name: install mochawesome
+        run: |
+          npm i npm i mochawesome-report-generator
+      - name: run test
+        run: |
+          npm test

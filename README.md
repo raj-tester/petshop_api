@@ -30,5 +30,5 @@ Run command:
 
 CMD or terminal run: npm test
 
-Test Report is generated in html forma. please check mochawesome-report-> mochawesome.html file for test report.
+Test Report is generated in html format. please check mochawesome-report-> mochawesome.html file for test report.
 

@@ -20,7 +20,6 @@ install mochawesome reporting tool: npm i mochawesome-report-generator
 
 
 There are three 3 javascript files i have created:
-
 1. Test.js: this file has all the test cases for api_testing.
 
 2.apiData.js : this file will be used as a data repository to store different types of data as per our business requirements and all data call will be happening from this file to test.js

@@ -37,7 +37,7 @@ jobs:
       - name: run test
         run: |
           npm test
-            - name: Install Postman CLI
+      - name: Install Postman CLI
         run: |
           curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
       - name: Login to Postman CLI

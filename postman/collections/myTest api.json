@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "f094b891-c315-45a8-8fa7-7e15c9bc78c3",
+		"name": "myTest api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "39344920-f094b891-c315-45a8-8fa7-7e15c9bc78c3"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const res = pm.response.json();",
+							"",
+							"console.log(res.id)",
+							"",
+							"pm.collectionVariables.set(\"newPetId\", res.id);"
+						],
+						"type": "text/javascript",
+						"id": "fc59539a-d0e7-4942-92c3-49f9c34806e2"
+					}
+				}
+			],
+			"id": "fa152fae-fd00-421d-b02e-1891f80e7ea1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2000,\n    \"category\": {\n      \"id\": 10,\n      \"name\": \"\"\n    },\n    \"name\": \"big dog\",\n    \"photoUrls\": [\n      \"www.str.com\"\n    ],\n    \"tags\": [\n      {\n        \"id\": 11,\n        \"name\": \"p1\"\n      }\n    ],\n    \"status\": \"available\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/pet",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"id": "bcab5ba1-5256-4754-91d9-1c89c6d8fd26"
+					}
+				}
+			],
+			"id": "00d4826f-8233-4772-9a0b-eee69be5ba6d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/pet/:pet_id",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"pet",
+						":pet_id"
+					],
+					"variable": [
+						{
+							"key": "pet_id",
+							"value": "{{newPetId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				],
+				"id": "26960e18-7cad-4d8f-a8ce-6539e240be09"
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				],
+				"id": "65318a4c-ac8e-40c0-876c-e619c8e6ca28"
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "7828a64e-baee-4c68-ac1f-067acf4a832f",
+			"key": "baseURL",
+			"value": "https://petstore.swagger.io/v2",
+			"type": "string"
+		},
+		{
+			"id": "ab08b79d-4f8d-46c3-8ab5-7274310ea64e",
+			"key": "newPetId",
+			"value": ""
+		}
+	]
+}

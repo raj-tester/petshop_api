@@ -20,7 +20,7 @@ jobs:
         run: |
           curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
       - name: Login to Postman CLI
-        run: postman login --with-api-key ${{ secrets.MYKEY }}
+        run: postman login --with-api-key ${{ secrets.postman_corti}}
       - name: Run API tests
         run: |
            postman collection run "${{ github.workspace }}/postman/collections/myTest api.json"
